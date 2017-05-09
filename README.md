@@ -9,4 +9,4 @@ This is a footer demo using SVG CSS animations and transitions.  A production ve
 3. Instagram
 4. Linkedin
 
-View through gh-pages at 
+View through gh-pages at https://kurtpetrek.github.io/rainbow-svg-footer/

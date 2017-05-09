@@ -1,0 +1,94 @@
+$size: 50px;
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100vh;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  background: black;
+  padding: 7px;
+}
+
+.footer-icon-container {
+  width: $size;
+  height: $size;
+  align-items:center;
+  justify-content: center;
+  display: flex;
+  filter: saturate(30%);
+}
+
+.footer-icon-frame {
+  position: absolute;
+  width: $size  * .96;
+  height: $size  * .96;
+  border: $size  * .05 solid white;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 1s, border-radius 1s;
+  animation: footer-icon-frame 5s infinite linear;
+}
+
+.footer-icon-container:hover .footer-icon-frame {
+  transform: rotate(360deg);
+  border-radius: 0%;
+  animation-play-state: paused;
+}
+
+.footer-icon-container:hover .footer-icon-path {
+  animation-play-state: paused;
+}
+
+@keyframes footer-icon-frame {
+   0% { border-color: red;}
+  14.3% { border-color: orange;}
+  28.6% { border-color: yellow; }
+  42.9% { border-color: green;}
+  57.2% { border-color: blue;}
+  71.5% { border-color: indigo;}
+  85.8% { border-color: violet;}
+  100% { border-color: red;}
+}
+
+.footer-icon {
+  width: $size  * .6;
+  position: relative;
+}
+
+.footer-icon-path {
+  fill: green;
+  animation: rainbow 5s infinite linear;
+}
+@keyframes rainbow {
+  0% { fill: red;}
+  14.3% { fill: orange;}
+  28.6% { fill: yellow;}
+  42.9% { fill: green;}
+  57.2% { fill: blue;}
+  71.5% { fill: indigo;}
+  85.8% { fill: violet; }
+  100% { fill: red;}
+}
+
+footer a:nth-child(2) .footer-icon-path, footer a:nth-child(2) .footer-icon-frame {
+  animation-delay: -1s;
+}
+
+footer a:nth-child(3) .footer-icon-path, footer a:nth-child(3) .footer-icon-frame {
+  animation-delay: -2s;
+}
+
+footer a:nth-child(4) .footer-icon-path, footer a:nth-child(4) .footer-icon-frame {
+  animation-delay: -3s;
+}

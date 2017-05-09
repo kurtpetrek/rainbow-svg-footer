@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: end;
+      align-items: flex-end;
+  -ms-flex-pack: center;
+      justify-content: center;
+  height: 100vh;
+}
+
+footer {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: black;
+  padding: 7px;
+}
+
+.footer-icon-container {
+  width: 50px;
+  height: 50px;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-filter: saturate(30%);
+          filter: saturate(30%);
+}
+
+.footer-icon-frame {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border: 2.5px solid white;
+  border-radius: 50%;
+  background: #fff;
+  transition: -webkit-transform 1s, border-radius 1s;
+  transition: transform 1s, border-radius 1s;
+  -webkit-animation: footer-icon-frame 5s infinite linear;
+          animation: footer-icon-frame 5s infinite linear;
+}
+
+.footer-icon-container:hover .footer-icon-frame {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  border-radius: 0%;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.footer-icon-container:hover .footer-icon-path {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes footer-icon-frame {
+  0% {
+    border-color: red;
+  }
+  14.3% {
+    border-color: orange;
+  }
+  28.6% {
+    border-color: yellow;
+  }
+  42.9% {
+    border-color: green;
+  }
+  57.2% {
+    border-color: blue;
+  }
+  71.5% {
+    border-color: indigo;
+  }
+  85.8% {
+    border-color: violet;
+  }
+  100% {
+    border-color: red;
+  }
+}
+
+@keyframes footer-icon-frame {
+  0% {
+    border-color: red;
+  }
+  14.3% {
+    border-color: orange;
+  }
+  28.6% {
+    border-color: yellow;
+  }
+  42.9% {
+    border-color: green;
+  }
+  57.2% {
+    border-color: blue;
+  }
+  71.5% {
+    border-color: indigo;
+  }
+  85.8% {
+    border-color: violet;
+  }
+  100% {
+    border-color: red;
+  }
+}
+.footer-icon {
+  width: 30px;
+  position: relative;
+}
+
+.footer-icon-path {
+  fill: green;
+  -webkit-animation: rainbow 5s infinite linear;
+          animation: rainbow 5s infinite linear;
+}
+
+@-webkit-keyframes rainbow {
+  0% {
+    fill: red;
+  }
+  14.3% {
+    fill: orange;
+  }
+  28.6% {
+    fill: yellow;
+  }
+  42.9% {
+    fill: green;
+  }
+  57.2% {
+    fill: blue;
+  }
+  71.5% {
+    fill: indigo;
+  }
+  85.8% {
+    fill: violet;
+  }
+  100% {
+    fill: red;
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    fill: red;
+  }
+  14.3% {
+    fill: orange;
+  }
+  28.6% {
+    fill: yellow;
+  }
+  42.9% {
+    fill: green;
+  }
+  57.2% {
+    fill: blue;
+  }
+  71.5% {
+    fill: indigo;
+  }
+  85.8% {
+    fill: violet;
+  }
+  100% {
+    fill: red;
+  }
+}
+footer a:nth-child(2) .footer-icon-path, footer a:nth-child(2) .footer-icon-frame {
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+}
+
+footer a:nth-child(3) .footer-icon-path, footer a:nth-child(3) .footer-icon-frame {
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+}
+
+footer a:nth-child(4) .footer-icon-path, footer a:nth-child(4) .footer-icon-frame {
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+}
